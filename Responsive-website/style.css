@@ -9,6 +9,7 @@ header {
   height: 100vh;
   position: relative;
 }
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -22,6 +23,7 @@ nav {
   font-weight: bold;
   color: #7f8fa6;
   letter-spacing: 5px;
+  padding: 5px 10px;
 }
 .menu a {
   text-decoration: none;
@@ -269,9 +271,20 @@ nav {
   margin: 10px 0px;
 }
 
-@media (max-width: 768px) {
-  .menu {
-    display: none;
+@media (min-width: 600px) and (max-width: 768px) {
+  /* .menu {
+    width: 70%;
+  } */
+  .menu a {
+    font-size: 17px;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 27px;
+    letter-spacing: 4px;
+  }
+  .icon img {
+    height: 20px;
   }
   .left {
     flex-basis: 100%;
@@ -326,5 +339,20 @@ nav {
   }
   .footer-row > div {
     flex-basis: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu a {
+    font-size: 13px;
+    padding: 5px;
+  }
+  .logo {
+    font-size: 23px;
+    letter-spacing: 2px;
+    padding: 5px;
+  }
+  .icon img {
+    height: 15px;
   }
 }
