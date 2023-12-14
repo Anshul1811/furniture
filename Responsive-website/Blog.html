@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Document</title>
+
+    <style>
+      .more-text {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -34,8 +40,23 @@
             cozy armchairs and entertainment units, find the perfect pieces to
             express your unique style.....
           </p>
-          <button class="c-btn">Read more</button>
+          <div class="more-text" id="moreText1">
+            <p>
+              Elevate your workspace with our range of functional and stylish
+              office furniture. Whether you're working from home or managing a
+              professional office, our desks, chairs, and storage solutions
+              combine form and function seamlessly.
+            </p>
+          </div>
+          <button
+            onclick="toggleText('moreText1')"
+            data-target="moreText1"
+            class="c-btn"
+          >
+            Read more
+          </button>
         </div>
+
         <div class="blog-box">
           <img src="images/img9.jpg" />
 
@@ -47,8 +68,24 @@
             functionality with aesthetics, providing a focal point for family
             gatherings and dinner parties.......
           </p>
-          <button class="c-btn">Read more</button>
+          <div class="more-text" id="moreText2">
+            <p>
+              Experience the beauty and comfort of our furniture in person by
+              visiting our showroom. Our knowledgeable staff is ready to assist
+              you in finding the perfect pieces for your home. Feel the
+              textures, test the comfort, and envision the possibilities with
+              us.
+            </p>
+          </div>
+          <button
+            onclick="toggleText('moreText2')"
+            data-target="moreText2"
+            class="c-btn"
+          >
+            Read more
+          </button>
         </div>
+
         <div class="blog-box">
           <img src="images/img8.jpg" />
 
@@ -60,9 +97,41 @@
             mattresses to spacious wardrobes, our collection caters to your
             every need for restful nights.......
           </p>
-          <button class="c-btn">Read more</button>
+          <div class="more-text" id="moreText3">
+            <p>
+              we prioritize quality craftsmanship. Each piece in our collection
+              is carefully selected for its durability, comfort, and timeless
+              design. We believe that furniture should not only complement your
+              lifestyle but also stand the test of time.
+            </p>
+          </div>
+
+          <button
+            onclick="toggleText('moreText3')"
+            data-target="moreText3"
+            class="c-btn"
+          >
+            Read more
+          </button>
         </div>
       </div>
     </section>
+
+    <script>
+      function toggleText(elementId) {
+        var moreText = document.getElementById(elementId);
+        var buttonText = document.querySelector(
+          "button[data-target='" + elementId + "']"
+        );
+
+        if (moreText.style.display === "none") {
+          moreText.style.display = "block";
+          buttonText.textContent = "Read Less";
+        } else {
+          moreText.style.display = "none";
+          buttonText.textContent = "Read More";
+        }
+      }
+    </script>
   </body>
 </html>
